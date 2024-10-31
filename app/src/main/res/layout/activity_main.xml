@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Авторизация"
+        android:fontFamily="@font/font1bold"
+        android:textColor="#5d4c87"
+        android:textSize="34sp"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:fontFamily="@font/font1"
+        android:hint="Введите логин"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        android:layout_marginTop="170dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:fontFamily="@font/font1"
+        android:hint="Введите пароль"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textSize="18dp"
+        android:fontFamily="@font/font1"
+        android:text="Войти"
+        android:layout_marginTop="220dp"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textSize="18dp"
+        android:fontFamily="@font/font1"
+        android:text="Регистрация"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

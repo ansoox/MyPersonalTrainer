@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Профиль"
+        android:fontFamily="@font/font1bold"
+        android:textColor="#5d4c87"
+        android:textSize="24sp"
+        android:layout_gravity="center"/>
+
+    <!-- Нижняя панель с тремя кнопками -->
+    <LinearLayout
+        android:id="@+id/bottomButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="#F0F0F0"
+        android:layout_marginTop="600dp">
+
+        <!-- Первая кнопка (текущая страница) -->
+        <Button
+            android:id="@+id/btnPage1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FF8800"
+            android:text="Тренировки"
+            android:textSize="10dp"
+            android:fontFamily="@font/font1"
+            android:textColor="#000000" />
+
+        <!-- Вторая кнопка -->
+        <Button
+            android:id="@+id/btnPage2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#CCCCCC"
+            android:text="Справочник"
+            android:textSize="10dp"
+            android:fontFamily="@font/font1"
+            android:textColor="#000000" />
+
+        <!-- Третья кнопка -->
+        <Button
+            android:id="@+id/btnPage3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#CCCCCC"
+            android:text="Профиль"
+            android:textSize="10dp"
+            android:fontFamily="@font/font1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>
