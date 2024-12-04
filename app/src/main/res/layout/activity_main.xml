@@ -5,33 +5,42 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Верхнее пустое пространство, занимает 30% высоты -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+
+    <!-- Заголовок, занимает 10% высоты -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="Авторизация"
         android:fontFamily="@font/font1bold"
         android:textColor="#5d4c87"
         android:textSize="34sp"
-        android:layout_marginTop="25dp"
-        android:layout_gravity="center"
-        />
+        android:layout_gravity="center" />
 
+    <!-- Поле для логина, занимает 15% высоты -->
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:minHeight="48dp"
         android:fontFamily="@font/font1"
         android:hint="Введите логин"
         android:textColor="#000000"
-        android:textColorHint="#757575"
-        android:layout_marginTop="170dp"/>
+        android:textColorHint="#757575" />
 
+    <!-- Поле для пароля, занимает 15% высоты -->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:minHeight="48dp"
         android:fontFamily="@font/font1"
         android:hint="Введите пароль"
@@ -39,23 +48,33 @@
         android:textColorHint="#757575"
         android:inputType="textPassword" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+
+    <!-- Кнопка Войти, занимает 10% высоты -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:minHeight="48dp"
         android:textSize="18dp"
         android:fontFamily="@font/font1"
-        android:text="Войти"
-        android:layout_marginTop="220dp"/>
+        android:text="Войти" />
 
+    <!-- Кнопка Регистрация, занимает 10% высоты -->
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:minHeight="48dp"
         android:textSize="18dp"
         android:fontFamily="@font/font1"
-        android:text="Регистрация"
-        android:layout_marginTop="20dp"/>
+        android:text="Регистрация" />
+
+    <!-- Нижнее пустое пространство, занимает 30% высоты -->
+
 </LinearLayout>

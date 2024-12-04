@@ -26,9 +26,15 @@ class Exercises : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = TrainingExercisesAdapter(this, exercisesList)
 
+        val btnCustomEx = findViewById<Button>(R.id.btnCustomEx)
         val btnPage1 = findViewById<Button>(R.id.btnPage1)
         val btnPage2 = findViewById<Button>(R.id.btnPage2)
         val btnPage3 = findViewById<Button>(R.id.btnPage3)
+
+        btnCustomEx.setOnClickListener {
+            val intent = Intent(this, CustomExercisesActivity::class.java)
+            startActivity(intent)
+        }
 
         btnPage1.setOnClickListener {
             val intent = Intent(this, TrainingProgramsWindow::class.java)

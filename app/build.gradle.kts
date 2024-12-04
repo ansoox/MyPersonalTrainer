@@ -7,6 +7,7 @@ plugins {
 android {
     namespace = "com.example.my_personal_trainer"
     compileSdk = 34
+    android.ndkVersion = "28.0.12674087"
 
     defaultConfig {
         applicationId = "com.example.my_personal_trainer"
@@ -34,6 +35,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    externalNativeBuild {
+        cmake {
+            path = file("C:\\Anna\\univer\\pms\\My_Personal_Trainer\\app\\src\\main\\cpp\\CMakeLists.txt")
+        }
+    }
 }
 
 dependencies {
@@ -46,6 +53,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.google.code.gson:gson:2.10.1")
+
 
     implementation("com.github.bumptech.glide:glide:4.12.0")
     kapt("com.github.bumptech.glide:compiler:4.12.0")

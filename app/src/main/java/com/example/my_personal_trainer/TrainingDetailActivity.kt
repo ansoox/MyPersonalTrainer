@@ -9,21 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 
 class TrainingDetailActivity : AppCompatActivity() {
 
-    private val exercisesList = listOf(
-        "Ягодичный мост", "Румынская тяга", "Жим ногами", "Тяга верхнего блока",
-        "Махи в кроссовере", "Разгибания ног сидя в тренажере на бицепс",
-        "Сгибания ног лежа в тренажере на бицепс", "Французский жим", "Молотки",
-        "Бицепс в блоке"
-    )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_training_detail)
 
-        val trainingName = intent.getStringExtra("training_name")
-        val detailTextView = findViewById<TextView>(R.id.tvTrainingDetail)
-        detailTextView.text = trainingName
+        // Получаем название тренировки и список упражнений из интента
+        val trainingName = intent.getStringExtra("training_title") ?: "Тренировка"
+        val exercisesList = intent.getStringArrayListExtra("exercises_list") ?: arrayListOf()
 
+        // Устанавливаем название тренировки
+        title = trainingName
+
+        // Настраиваем RecyclerView для отображения списка упражнений
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = TrainingExercisesAdapter(this, exercisesList)
@@ -31,7 +28,8 @@ class TrainingDetailActivity : AppCompatActivity() {
         // Обработка нажатия на кнопку "Назад"
         val btnBack = findViewById<Button>(R.id.btnBack)
         btnBack.setOnClickListener {
-            finish() // Закрывает текущую активность и возвращается к предыдущей
+            finish() // Закрываем текущую активность и возвращаемся назад
         }
+
     }
 }

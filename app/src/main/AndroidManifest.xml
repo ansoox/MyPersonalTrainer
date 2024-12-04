@@ -29,6 +29,8 @@
         <activity android:name=".Profile" />
         <activity android:name=".TrainingDetailActivity" />
         <activity android:name=".ExerciseDetailActivity" />
+        <activity android:name=".CustomExercisesActivity" />
+        <activity android:name=".CreateCustomExerciseActivity" />
 
     </application>
 

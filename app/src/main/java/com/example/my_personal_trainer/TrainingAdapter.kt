@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class TrainingAdapter(
     private val context: Context,
-    private val trainingList: List<String>
+    private val trainingList: List<String>,
+    private val onItemClick: (String) -> Unit
 ) : RecyclerView.Adapter<TrainingAdapter.TrainingViewHolder>() {
 
     inner class TrainingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -19,9 +20,9 @@ class TrainingAdapter(
         init {
             itemView.setOnClickListener {
                 val position = adapterPosition
-                val intent = Intent(context, TrainingDetailActivity::class.java)
-                intent.putExtra("training_name", trainingList[position])
-                context.startActivity(intent)
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClick(trainingList[position])
+                }
             }
         }
     }

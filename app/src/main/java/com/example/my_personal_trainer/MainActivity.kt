@@ -33,7 +33,9 @@ class MainActivity : AppCompatActivity() {
 
             if (authenticateUser(username, password)) {
                 Toast.makeText(this, "Вход выполнен!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, TrainingProgramsWindow::class.java)
+                val intent = Intent(this, Profile::class.java)
+                intent.putExtra("username", username)
+                intent.putExtra("password", password)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show()

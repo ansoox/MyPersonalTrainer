@@ -11,7 +11,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GestureDetectorCompat
 import com.bumptech.glide.Glide
-import com.example.my_personal_trainer.R
 
 class ExerciseDetailActivity : AppCompatActivity() {
 
@@ -76,6 +75,7 @@ class ExerciseDetailActivity : AppCompatActivity() {
     inner class SwipeGestureListener : GestureDetector.SimpleOnGestureListener() {
         private val SWIPE_THRESHOLD = 100
         private val SWIPE_VELOCITY_THRESHOLD = 100
+        val nativeLib = NativeLib()
 
         override fun onFling(
             e1: MotionEvent?,
@@ -85,6 +85,7 @@ class ExerciseDetailActivity : AppCompatActivity() {
         ): Boolean {
             e1?.let {
                 val diffX = e2.x - it.x
+//                val diffX = nativeLib.calculateDiffX(e2.x, it.x)
                 if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
                     if (diffX > 0) {
                         finish()
